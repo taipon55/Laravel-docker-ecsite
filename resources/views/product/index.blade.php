@@ -1,18 +1,10 @@
-<html>
-    <head>
-        <title>商品一覧 | {{ config('app.name', 'Laravel')}}</title>
-        @vite('resources/sass/app.scss')
-    </head>
-    <body>
-        <nav class="navbar navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand" href="{{route('product.index')}}">{{config('app.name','Laravel')}}</a>
-                <a class="fas fa-shopping-cart" href="#"></a>
-            </div>
-        </nav>
-    </body>
+@extends('layouts.app')
 
-    <div class="jumbotron top-img">
+@section('title')
+商品一覧
+@endsection
+@section('content')
+<div class="jumbotron top-img">
         <p class="text-center text-white top-img-text">{{ config('app.name', 'Laravel')}}</p>
     </div>
 
@@ -34,4 +26,4 @@
             @endforeach
         </div>
     </div>
-</html>
+@endsection
